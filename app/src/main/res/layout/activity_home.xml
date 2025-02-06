@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="245dp"
+        android:id="@+id/header_lv"
+
+
+
+
+        android:background="@drawable/custom_top">
+
+        <TextView
+
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+
+
+
+
+            android:text="DairyManager"
+            android:textColor="#E7FD0C"
+            android:textSize="27dp"
+            android:layout_marginTop="10dp"
+
+
+            android:textStyle="bold">
+
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+
+
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/logo"></ImageView>
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/logo"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="WELCOME,"
+            android:textColor="#0B0B0A"
+            android:textSize="28dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/welcome"
+            android:layout_marginLeft="12dp"
+
+            android:textSize="20dp"
+            android:id="@+id/seller_name"
+            android:text="Priyansh Sahu"
+            android:textStyle="italic"
+            android:textColor="@color/white"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seller_name"
+            android:layout_marginLeft="12dp"
+            android:textSize="18dp"
+            android:layout_marginTop="5dp"
+            android:text="+91 7828582123"
+            android:id="@+id/seller_phNo"
+            android:textStyle="italic"
+            android:textColor="@color/white"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:id="@+id/earned_amt_tv"
+            android:layout_toLeftOf="@+id/earned_amt"
+            android:text="Earned Amt : "
+            android:textColor="#FAE958"
+            android:layout_below="@+id/welcome"
+            android:layout_marginLeft="89dp"
+            android:textSize="18dp"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/welcome"
+            android:text="₹ 1000"
+            android:layout_marginRight="27dp"
+            android:id="@+id/earned_amt"
+
+            android:textSize="18dp"
+            android:textColor="#1FF127"
+
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:id="@+id/invest_amt_tv"
+            android:layout_toLeftOf="@+id/invest_amt"
+            android:text="Investment : "
+            android:textColor="#FAE958"
+            android:layout_below="@+id/seller_name"
+            android:layout_marginLeft="89dp"
+            android:textSize="18dp"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:id="@+id/invest_amt"
+            android:layout_below="@id/seller_name"
+
+
+            android:text="₹ 1000"
+            android:layout_marginRight="27dp"
+
+
+            android:textSize="18dp"
+            android:textColor="#B8382F"
+
+            ></TextView>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:contentDescription="add button"
+        android:src="@drawable/add"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_lv"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="11dp"
+        android:visibility="gone"
+        android:layout_marginBottom="11dp"></androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="progress bar"
+        android:visibility="gone"
+        android:id="@+id/pb"
+
+        >
+
+    </ProgressBar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="NO CUSTOMER FOUND"
+        android:id="@+id/EmptyTv"
+        android:visibility="gone"
+        android:textSize="25dp"
+
+        android:textStyle="bold"></TextView>
+
+
+</RelativeLayout>

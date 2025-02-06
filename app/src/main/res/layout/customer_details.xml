@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:context=".CustomerDetailActivity">
+
+
+    <TextView
+        android:id="@+id/tvCustomerDetailsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Customer Details"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="12dp" />
+
+    <!-- Customer Basic Details -->
+    <LinearLayout
+        android:id="@+id/llCustomerBasicDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintTop_toBottomOf="@id/tvCustomerDetailsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="6dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="16dp">
+
+        <!-- Customer Name -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_person"
+
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvCustomerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name: John Doe"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_phone"
+
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvCustomerPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone: 9876543210"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_scale"
+
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvCustomerQnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity: 5L"
+                android:textSize="16sp"
+                android:textColor="#000000"
+            android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+        <!-- Rate -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_money"
+
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvCustomerRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate: ₹50/L"
+                android:textSize="16sp"
+                android:textColor="#000000"
+            android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+
+        <!-- Start Date -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/baseline_calendar_month_24"
+
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvCustomerStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Date: 01 Jan 2024"
+                android:textSize="16sp"
+                android:textColor="#000000"
+            android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- TabLayout and ViewPager2 -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_marginTop="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="tablayout"
+        app:layout_constraintTop_toBottomOf="@id/llCustomerBasicDetails"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerCustomerDetails"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

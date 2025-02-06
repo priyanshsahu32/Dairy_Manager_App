@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    android:padding="16dp"
+    android:spacing="10dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Customer Name"
+        android:id="@+id/customer_name"
+        android:background="@drawable/edittext_background"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
+        android:padding="12dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Customer ContactNo"
+        android:id="@+id/customer_phNo"
+        android:background="@drawable/edittext_background"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
+        android:padding="12dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Quantity (liters/day)"
+        android:id="@+id/qnt"
+        android:background="@drawable/edittext_background"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
+        android:padding="12dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Rate (rupees/liters)"
+        android:id="@+id/rate"
+        android:background="@drawable/edittext_background"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
+
+        android:padding="12dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+
+            android:hint="Start Date (dd/mm/yyyy)"
+            android:id="@+id/startDate"
+            android:background="@drawable/edittext_background"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/black"
+            android:padding="12dp"/>
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/calendarBtn"
+            android:contentDescription="calendar button"
+            android:src="@drawable/baseline_calendar_month_24"
+            android:layout_toRightOf="@+id/startDate"
+            android:background="@android:color/transparent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_background"
+            android:text="Add"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/button_background"
+            android:text="Cancel"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
